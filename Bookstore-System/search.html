@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="search.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        .search-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .search-query {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        .book-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .book {
+            width: 18%;
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 10px;
+            background-color: white;
+            transition: box-shadow 0.3s ease;
+        }
+        .book:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .book img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="search-container">
+        <h1>Search Results</h1>
+        <div class="search-query">
+            <p>Your search query: <strong id="search-query"></strong></p>
+        </div>
+        <div class="book-row" id="recommended-books">
+
+        </div>
+        <div class="book-row" id="recommended-books-2">
+
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const searchQuery = urlParams.get('searchtext');
+            
+
+            const searchQueryElement = document.getElementById('search-query');
+            searchQueryElement.textContent = searchQuery;
+            
+ 
+            const recommendedBooks = [
+                { title: 'Book 1', imgSrc: 'path_to_image1.jpg' },
+                { title: 'Book 2', imgSrc: 'path_to_image2.jpg' },
+                { title: 'Book 3', imgSrc: 'path_to_image3.jpg' },
+                { title: 'Book 4', imgSrc: 'path_to_image4.jpg' },
+                { title: 'Book 5', imgSrc: 'path_to_image5.jpg' },
+                { title: 'Book 6', imgSrc: 'path_to_image6.jpg' },
+                { title: 'Book 7', imgSrc: 'path_to_image7.jpg' },
+                { title: 'Book 8', imgSrc: 'path_to_image8.jpg' },
+                { title: 'Book 9', imgSrc: 'path_to_image9.jpg' },
+                { title: 'Book 10', imgSrc: 'path_to_image10.jpg' }
+            ];
+
+ 
+            function createBookElement(book) {
+                const bookDiv = document.createElement('div');
+                bookDiv.className = 'book';
+                bookDiv.innerHTML = `
+                    <img src="${book.imgSrc}" alt="${book.title}">
+                    <p>${book.title}</p>
+                `;
+                return bookDiv;
+            }
+
+            // Insert recommended books into the DOM
+            const recommendedBooksContainer = document.getElementById('recommended-books');
+            const recommendedBooksContainer2 = document.getElementById('recommended-books-2');
+
+            recommendedBooks.slice(0, 5).forEach(book => {
+                recommendedBooksContainer.appendChild(createBookElement(book));
+            });
+
+            recommendedBooks.slice(5, 10).forEach(book => {
+                recommendedBooksContainer2.appendChild(createBookElement(book));
+            });
+        });
+    </script>
+</body>
+</html>
