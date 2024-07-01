@@ -5,60 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search Results</title>
     <link rel="stylesheet" href="search.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            padding: 20px;
-        }
-        .search-container {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .search-query {
-            font-size: 1.5em;
-            margin-bottom: 20px;
-        }
-        .book-row {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            margin-top: 20px;
-        }
-        .book {
-            width: 18%;
-            border: 1px solid #ccc;
-            padding: 10px;
-            text-align: center;
-            margin-bottom: 10px;
-            background-color: white;
-            transition: box-shadow 0.3s ease;
-        }
-        .book:hover {
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
-        .book img {
-            width: 100%;
-            height: auto;
-        }
-    </style>
+    <link rel="stylesheet" href="navbar.css">
 </head>
 <body>
-    <div class="search-container">
-        <h1>Search Results</h1>
-        <div class="search-query">
-            <p>Your search query: <strong id="search-query"></strong></p>
-        </div>
-        <div class="book-row" id="recommended-books">
+    <div class="navbar">
+        <ul>
+          <li><a href="/home.html" class="navlink">Home</a></li>
+          <li><a href="/login.html" class="navlink">Login</a></li>
+          <li><a href="/cart.html" class="navlink">View cart</a></li>
+          <li>
+            <form class="searchform" action="/search.html" method="get">
+              <input type="text" id="searchtext" name="searchtext" placeholder="Search books...">
+              <input type="image" src="/images/searchicon.png" alt="Search" height="40px">
+            </form>
+          </li>
+          <li><a href="/profile.html"><img src="/images/profile-icon-9.png" alt="" height="40px"/></a></li>
+  
+        </ul>
+      </div>
+    <div class="outer-container">
+        <div class="search-container">
+            <h1>Search Results</h1>
+            <div class="search-query">
+                <p>Your search query: <strong id="search-query"></strong></p>
+            </div>
+            <div class="book-row" id="recommended-books">
 
-        </div>
-        <div class="book-row" id="recommended-books-2">
+            </div>
+            <div class="book-row" id="recommended-books-2">
 
+            </div>
         </div>
     </div>
 

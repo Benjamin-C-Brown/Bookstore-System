@@ -5,8 +5,8 @@
     box-sizing: border-box;
 }
 
-/* Body styles */
-body {
+/* Styles for entire page aside from navbar */
+.outer-container {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     display: flex;

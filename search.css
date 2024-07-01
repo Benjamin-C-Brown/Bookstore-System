@@ -1,15 +1,9 @@
-/* Reset default margin and padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body styles */
-body {
+/* Styles for entire page aside from navbar */
+.outer-container {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     padding: 20px;
+    box-sizing: border-box;
 }
 
 /* Container for search results */

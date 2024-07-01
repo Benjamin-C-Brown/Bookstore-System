@@ -4,57 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="home.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .login-container {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        .login-container h2 {
-            margin-bottom: 20px;
-        }
-        .login-container input[type="text"],
-        .login-container input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        .login-container input[type="submit"] {
-            background-color: black;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            width: 100%;
-        }
-        .login-container input[type="submit"]:hover {
-            background-color: #333;
-        }
-    </style>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="navbar.css">
 </head>
 <body>
-    <div class="login-container">
-        <h2>Login</h2>
-        <form action="/home.html" method="post">
-            <input type="text" name="username" placeholder="Username" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <input type="submit" value="Enter">
-        </form>
+    <div class="navbar">
+        <ul>
+          <li><a href="/home.html" class="navlink">Home</a></li>
+          <li><a href="/login.html" class="navlink">Login</a></li>
+          <li><a href="/cart.html" class="navlink">View cart</a></li>
+          <li>
+            <form class="searchform" action="/search.html" method="get">
+              <input type="text" id="searchtext" name="searchtext" placeholder="Search books...">
+              <input type="image" src="/images/searchicon.png" alt="Search" height="40px">
+            </form>
+          </li>
+          <li><a href="/profile.html"><img src="/images/profile-icon-9.png" alt="" height="40px"/></a></li>
+  
+        </ul>
+      </div>
+    <div class="outer-container">
+        <div class="login-container">
+            <h2>Login</h2>
+            <form action="/home.html" method="post">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="submit" value="Enter">
+            </form>
+        </div>
     </div>
 </body>
 </html>
