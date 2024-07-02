@@ -1,0 +1,115 @@
+.navbar {
+    background-color: black;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    height: 100%;
+    justify-content: space-around;
+}
+
+.navbar li {
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    width: 35%;
+    justify-content: center;
+    font-weight: bold;
+    color: lightgray;
+}
+
+.navbar .navlink {
+    text-decoration: none;
+    font-weight: bold;
+    color: lightgray;
+}
+
+.navbar .searchform {
+    display: flex;
+}
+
+.navbar #searchtext {
+    background-color: lightgray;
+    font-size: 16px;
+    margin-right: 5px;
+    border-radius: 8px;
+}
+
+.managebtn {
+    color: yellow;
+}
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: lightgray;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: gray;}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+
+  .intro {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 800px;
+  }
+
+  .banner {
+    text-align: center;
+    margin: 20px auto;
+  }
+
+  .banner img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+  }
+
+  .book-section {
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  .book-row {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+
+  .book {
+    width: 18%;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .book img {
+    width: 100%;
+    height: auto;
+  }

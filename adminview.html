@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookstore</title>
+    <link rel="stylesheet" href="adminview.css">
+    <link rel="stylesheet" href="navbar.css">
+  </head>
+  <body>
+    <div class="navbar">
+      <ul>
+        <li><a href="/home.html" class="navlink">Home</a></li>
+        <li><a href="/login.html" class="navlink">Login</a></li>
+        <li><a href="/cart.html" class="navlink">View cart</a></li>
+        <li>
+            <div class="dropdown">
+                <label class="managebtn">Manage</label>
+                <div class="dropdown-content">
+                    <a href="/managebooks.html">Manage books</a>
+                    <a href="/manageusers.html">Manage users</a>
+                    <a href="/managepromotions.html">Mange promotions</a>
+                </div>
+            </div>
+        </li>
+        <li>
+          <form class="searchform" action="/search.html" method="get">
+            <input type="text" id="searchtext" name="searchtext" placeholder="Search books...">
+            <input type="image" src="/images/searchicon.png" alt="Search" height="40px">
+          </form>
+        </li>
+        <li><a href="/profile.html"><img src="/images/profile-icon-9.png" alt="" height="40px"/></a></li>
+      </ul>
+    </div>
+    
+    <div class="intro">
+      <h1>FIND YOUR FAVORITE BOOK WITH BOOKSTORE-SYSTEM</h1>
+      <p>Over 5 million books ready to ship and 3.6 million eBooks ready to download!</p>
+    </div>
+
+    <div class="banner">
+      <img src="/images/homepageimage.jpeg" alt="Banner">
+    </div>
+    
+    <div class="book-section" id="top-sellers">
+      <h2>Top Sellers</h2>
+      <div class="book-row" id="top-sellers-row">
+  
+      </div>
+    </div>
+    
+    <div class="book-section" id="coming-soon">
+      <h2>Coming Soon</h2>
+      <div class="book-row" id="coming-soon-row">
+
+      </div>
+    </div>
+
+    <script>
+
+      const topSellers = [
+        { title: 'Top Seller 1', imgSrc: 'path_to_image1.jpg' },
+        { title: 'Top Seller 2', imgSrc: 'path_to_image2.jpg' },
+        { title: 'Top Seller 3', imgSrc: 'path_to_image3.jpg' },
+        { title: 'Top Seller 4', imgSrc: 'path_to_image4.jpg' },
+        { title: 'Top Seller 5', imgSrc: 'path_to_image5.jpg' },
+      ];
+
+      const comingSoon = [
+        { title: 'Coming Soon 1', imgSrc: 'path_to_image6.jpg' },
+        { title: 'Coming Soon 2', imgSrc: 'path_to_image7.jpg' },
+        { title: 'Coming Soon 3', imgSrc: 'path_to_image8.jpg' },
+        { title: 'Coming Soon 4', imgSrc: 'path_to_image9.jpg' },
+        { title: 'Coming Soon 5', imgSrc: 'path_to_image10.jpg' },
+      ];
+
+      function createBookElement(book) {
+        const bookDiv = document.createElement('div');
+        bookDiv.className = 'book';
+        bookDiv.innerHTML = `
+          <img src="${book.imgSrc}" alt="${book.title}">
+          <p>${book.title}</p>
+        `;
+        return bookDiv;
+      }
+
+      const topSellersRow = document.getElementById('top-sellers-row');
+      topSellers.forEach(book => {
+        topSellersRow.appendChild(createBookElement(book));
+      });
+
+      const comingSoonRow = document.getElementById('coming-soon-row');
+      comingSoon.forEach(book => {
+        comingSoonRow.appendChild(createBookElement(book));
+      });
+    </script>
+  </body>
+</html>
