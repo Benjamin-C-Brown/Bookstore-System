@@ -15,23 +15,23 @@ body {
     text-align: center;
 }
 
-h2 {
+.container h2 {
     margin-bottom: 20px;
     color: #000000;
 }
 
-.form-group {
+.container .form-group {
     margin-bottom: 15px;
     text-align: left;
 }
 
-label {
+.container label {
     display: block;
     margin-bottom: 5px;
     color: #000000;
 }
 
-input {
+.container input {
     width: 100%;
     padding: 8px;
     box-sizing: border-box;
@@ -44,7 +44,7 @@ input {
     color: red;
 }
 
-button {
+.container button {
     width: 100%;
     padding: 10px;
     background-color: #000000;
@@ -54,11 +54,11 @@ button {
     margin-top: 10px;
 }
 
-button:hover {
+.container button:hover {
     background-color: #333333;
 }
 
-p {
+.container p {
     color: #000000;
     font-size: 16px;
 }
