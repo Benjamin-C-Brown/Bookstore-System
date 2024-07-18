@@ -1,30 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View cart</title>
-    <link rel="stylesheet" href="profile.css">
-    <link rel="stylesheet" href="navbar.css">
-  </head>
-  <body>
-        <div class="navbar">
-            <ul>
-            <li><a href="home.html" class="navlink">Home</a></li>
-            <li><a href="login.html" class="navlink">Login</a></li>
-            <li><a href="cart.html" class="navlink">View cart</a></li>
-            <li>
-                <form class="searchform" action="search.html" method="get">
-                <input type="text" id="searchtext" name="searchtext" placeholder="Search books...">
-                <input type="image" src="images/searchicon.png" alt="Search" height="40px">
-                </form>
-            </li>
-            <li><a href="profile.html"><img src="images/profile-icon-9.png" alt="" height="40px"/></a></li>
-    
-            </ul>
-        </div>
+import React from 'react';
+import './profile.css';
+import NavBar from '../navbar/NavBar.js';
 
-        <div class="outer">
+const Profile = () => {
+  return (
+    <div>
+      <NavBar/>
+      <div class="outer">
           <div class="content">
             <h1>Your profile</h1>
             <div class="personal">
@@ -47,7 +29,7 @@
                 </span>
               </div>
             </div>
-            <hr>
+            <hr/>
             <div class="address">
               <div class="line">
                 <label class="label">Address:</label>
@@ -61,7 +43,7 @@
                 <button>Edit address information</button>
               </div>
             </div>
-            <hr>
+            <hr/>
             <div class="payment">
               <div class="line">
                 <label class="label">Credit card type:</label>
@@ -85,5 +67,8 @@
             </div>
           </div>
         </div>
-    </body>
-</html>
+      </div>
+  );
+};
+
+export default Profile;
