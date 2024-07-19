@@ -60,16 +60,16 @@ const ConfirmCart = () => {
             <div class="top-row">
                 <p></p>
                 <h1>Total: $869.08</h1>
-                <button class="open-button" type="button" onclick={showPopup}>Enter promotion</button>
+                <button class="open-button" type="button" onClick={showPopup}>Enter promotion</button>
 
                 <div id="popup">
                     <h1>Total: $869.08</h1>
                     <input type="text" id="promotiontext" placeholder="Enter promotion code..."/>
                     <button type="submit">Submit</button>
-                    <button type="button" class="cancel" onclick={closePopup}>Close</button>
+                    <button type="button" class="cancel" onClick={closePopup}>Close</button>
                 </div>
-                <a href="home.html">
-                    <button type="button" onclick={processPayment}>Process payment</button>
+                <a href="/">
+                    <button type="button" onClick={processPayment}>Process payment</button>
                 </a>
             </div>
             <div id="cart-container">

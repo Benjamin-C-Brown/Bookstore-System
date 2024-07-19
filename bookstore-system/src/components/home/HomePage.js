@@ -7,20 +7,20 @@ const HomePage = () => {
 
   useEffect(() => {
   const topSellers = [
-    { title: 'Top Seller 1', imgSrc: 'Book Images/PrideandPrejudice.jpg', id: '0001' },
-    { title: 'Top Seller 2', imgSrc: 'Book Images/alchemist.jpg', id: '0002' },
-    { title: 'Top Seller 3', imgSrc: 'Book Images/odysessy.jpg', id: '0003' },
-    { title: 'Top Seller 4', imgSrc: 'Book Images/gatsby.jpg', id: '0004' },
-    { title: 'Top Seller 5', imgSrc: 'Book Images/hobbit.jpg', id: '0005' },
+    { title: 'Top Seller 1', imgSrc: 'Book Images/PrideandPrejudice.jpg', id: '4' },
+    { title: 'Top Seller 2', imgSrc: 'Book Images/alchemist.jpg', id: '11' },
+    { title: 'Top Seller 3', imgSrc: 'Book Images/odysessy.jpg', id: '15' },
+    { title: 'Top Seller 4', imgSrc: 'Book Images/gatsby.jpg', id: '3' },
+    { title: 'Top Seller 5', imgSrc: 'Book Images/hobbit.jpg', id: '6' },
   ];
   
 
   const comingSoon = [
-    { title: 'Coming Soon 1', imgSrc: 'path_to_image6.jpg', id: '0006' },
-    { title: 'Coming Soon 2', imgSrc: 'path_to_image7.jpg', id: '0007' },
-    { title: 'Coming Soon 3', imgSrc: 'path_to_image8.jpg', id: '0008' },
-    { title: 'Coming Soon 4', imgSrc: 'path_to_image9.jpg', id: '0009' },
-    { title: 'Coming Soon 5', imgSrc: 'path_to_image10.jpg', id: '0010' },
+    { title: 'Coming Soon 1', imgSrc: 'path_to_image6.jpg', id: '6' },
+    { title: 'Coming Soon 2', imgSrc: 'path_to_image7.jpg', id: '7' },
+    { title: 'Coming Soon 3', imgSrc: 'path_to_image8.jpg', id: '8' },
+    { title: 'Coming Soon 4', imgSrc: 'path_to_image9.jpg', id: '9' },
+    { title: 'Coming Soon 5', imgSrc: 'path_to_image10.jpg', id: '10' },
   ];
 
   function createBookElement(book) {
@@ -29,7 +29,7 @@ const HomePage = () => {
     bookDiv.innerHTML = `
       <img src="${book.imgSrc}" alt="${book.title}">
       <p>${book.title}</p>
-      <p><a href="bookdetails.html/id=${book.id}">View details</a></p>
+      <p><a href="viewdetails/${book.id}">View details</a></p>
     `;
     return bookDiv;
   }

@@ -1,0 +1,9 @@
+.bookdetails {
+    margin-top: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+p, h3 {
+    margin-top: 10px;
+}
