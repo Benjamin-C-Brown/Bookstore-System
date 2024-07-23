@@ -7,20 +7,20 @@ const HomePage = () => {
 
   useEffect(() => {
   const topSellers = [
-    { title: 'Top Seller 1', imgSrc: 'Book Images/PrideandPrejudice.jpg', id: '4' },
-    { title: 'Top Seller 2', imgSrc: 'Book Images/alchemist.jpg', id: '11' },
-    { title: 'Top Seller 3', imgSrc: 'Book Images/odysessy.jpg', id: '15' },
-    { title: 'Top Seller 4', imgSrc: 'Book Images/gatsby.jpg', id: '3' },
-    { title: 'Top Seller 5', imgSrc: 'Book Images/hobbit.jpg', id: '6' },
+    { title: 'Pride and Prejudice', imgSrc: 'Book Images/PrideandPrejudice.jpg', id: '4' },
+    { title: 'The Alchemist', imgSrc: 'Book Images/alchemist.jpg', id: '11' },
+    { title: 'The Odyssey', imgSrc: 'Book Images/odysessy.jpg', id: '15' },
+    { title: 'The Great Gatsby', imgSrc: 'Book Images/gatsby.jpg', id: '3' },
+    { title: 'The Hobbit', imgSrc: 'Book Images/hobbit.jpg', id: '6' },
   ];
   
 
   const comingSoon = [
-    { title: 'Coming Soon 1', imgSrc: 'path_to_image6.jpg', id: '6' },
-    { title: 'Coming Soon 2', imgSrc: 'path_to_image7.jpg', id: '7' },
-    { title: 'Coming Soon 3', imgSrc: 'path_to_image8.jpg', id: '8' },
-    { title: 'Coming Soon 4', imgSrc: 'path_to_image9.jpg', id: '9' },
-    { title: 'Coming Soon 5', imgSrc: 'path_to_image10.jpg', id: '10' },
+    { title: 'Animal Farm', imgSrc: 'Book Images/animalfarm.jpg'},
+    { title: 'Don Quixote', imgSrc: 'Book Images/donquixote.jpg'},
+    { title: 'Dracula', imgSrc: 'Book Images/dracula.jpg'},
+    { title: 'Fahrenheit 451', imgSrc: 'Book Images/fahrenheit451.jpg'},
+    { title: 'The Hunger Games', imgSrc: 'Book Images/thehungergames.jpg'},
   ];
 
   function createBookElement(book) {
@@ -34,6 +34,16 @@ const HomePage = () => {
     return bookDiv;
   }
 
+  function createBook2Element(book) {
+    const bookDiv = document.createElement('div');
+    bookDiv.className = 'book';
+    bookDiv.innerHTML = `
+      <img src="${book.imgSrc}" alt="${book.title}">
+      <p>${book.title}</p>
+    `;
+    return bookDiv;
+  }
+
   const topSellersRow = document.getElementById('top-sellers-row');
   topSellers.forEach(book => {
     topSellersRow.appendChild(createBookElement(book));
@@ -41,7 +51,7 @@ const HomePage = () => {
 
   const comingSoonRow = document.getElementById('coming-soon-row');
   comingSoon.forEach(book => {
-    comingSoonRow.appendChild(createBookElement(book));
+    comingSoonRow.appendChild(createBook2Element(book));
   });
 },[]);
 
