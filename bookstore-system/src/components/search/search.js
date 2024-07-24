@@ -13,10 +13,12 @@ const Search = () => {
 
         setSearchQuery(query);
         setSearchType(type);
+    }, []);
 
+    useEffect(() => {
         const searchQueryElement = document.getElementById('search-query');
         if (searchQueryElement) {
-            searchQueryElement.textContent = `${type.charAt(0).toUpperCase() + type.slice(1)}: ${query}`;
+            searchQueryElement.textContent = `${searchType.charAt(0).toUpperCase() + searchType.slice(1)}: ${searchQuery}`;
         }
 
         const recommendedBooks = [
