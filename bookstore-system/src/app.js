@@ -9,6 +9,7 @@ import Search from "./components/search/search.js";
 import ConfirmCart from "./components/confirmcart/confirmcart.js";
 import ThankYou from "./components/thankyou/thankyou.js";
 import ViewDetails from "./components/viewdetails/viewdetails.js";
+import AddBook from "./components/addbook/addbook.js";
 
 function App() {
     return (
@@ -24,6 +25,7 @@ function App() {
                 <Route path="/confirmcart" element={<ConfirmCart />} />
                 <Route path="/thankyou" element={<ThankYou />} />
                 <Route path="/viewdetails/:id" element={<ViewDetails />} />
+                <Route path="/addbook" element={<AddBook />} />
             </Routes>
         </div>
     );
